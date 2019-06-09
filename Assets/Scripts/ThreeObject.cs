@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class ThreeObject : MonoBehaviour
 {
+    public string ConvertTransform()
+    {
+        return $"\n{Name}.position.set{Position};" +
+                    $"\n{Name}.rotation.set{Rotaion};" +
+                    $"\n{Name}.scale.set{Scale};";
+    }
+
     public string Position
     {
         get

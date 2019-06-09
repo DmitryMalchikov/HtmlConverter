@@ -16,9 +16,7 @@
     public string ConvertToHtml()
     {
         string res = $"var {Name} = new THREE.Mesh( {GeometryName}, {MaterialName} );" +
-         $"\n{Name}.position.set{Position};" +
-         $"\n{Name}.rotation.set{Rotaion};"+
-         $"\n{Name}.scale.set{Scale};" +
+          ConvertTransform() +
           $"\nscene.add({Name}); ";
 
         return res;
