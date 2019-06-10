@@ -11,8 +11,8 @@ public static class VectorExtensions
     public static Vector3 ToThreeRoation(this Quaternion rotation)
     {
         Quaternion res = new Quaternion(-rotation.x, rotation.y, rotation.z, -rotation.w);
-        var eulers = res.eulerAngles;
-        var radiansVector = Mathf.Deg2Rad * new Vector3(eulers.x, 180+eulers.y, -eulers.z);
+        var eulers = rotation.eulerAngles;
+        var radiansVector = Mathf.Deg2Rad * new Vector3(eulers.x, 180 - eulers.y, eulers.z);
         return radiansVector;
     }
 }

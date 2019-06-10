@@ -16,7 +16,7 @@ public class ThreeObject : MonoBehaviour
     {
         get
         {
-            return transform.position.ToThreePosition().ToString("G4");
+            return transform.position.ToThreePosition().ToString("G6");
         }
     }
 
@@ -24,7 +24,7 @@ public class ThreeObject : MonoBehaviour
     {
         get
         {
-            return transform.rotation.ToThreeRoation().ToString("G4");
+            return transform.rotation.ToThreeRoation().ToString("G6");
         }
     }
 
@@ -32,7 +32,7 @@ public class ThreeObject : MonoBehaviour
     {
         get
         {
-            return transform.localScale.ToString("G4");
+            return transform.localScale.ToString("G6");
         }
     }
 
